@@ -1,0 +1,204 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ .app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2c3e50;
+}
+
+.weather-container {
+  display: flex;
+  flex-wrap: wrap;
+  background: #1e293b;
+  border-radius: 15px;
+  /* overflow: hidden; */
+  max-width: 700px;
+  width: 100%;
+}
+
+
+.left-card {
+  position: relative;
+  flex: 0  0  48%;
+  min-width: 300px;
+  padding: 20px;
+  color: white;
+  border-radius: 20px;
+  
+  background:
+    url('/images/Rectangle 2.png'); /* Use leading / to point to public folder */
+    
+  background-size: cover;
+  background-position: center;
+  min-height: 420px;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+
+.left-card h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.left-card p {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.left-card .location {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.temp-section {
+  margin-top: 120px;
+}
+
+.temp-section h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+.temp-section p{
+  font-size: 24px;
+  font-weight: bold;
+}
+ .right-card {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  background: #1e293b;
+  color: white;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+}
+
+.details p {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.forecast {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.forecast .day {
+  flex: 1;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px 10px;
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.forecast .day:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.forecast .day p {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.forecast .day.active {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.forecast .day.active p {
+  color: #000;
+}
+
+/* Change Location Button */
+.change-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #90D9E0, #5460E6);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.change-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Form container */
+.change-location {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+/* Input box */
+.change-location input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  background: #f9fafb;
+  color: #333;
+  transition: border 0.2s ease;
+}
+
+.change-location input:focus {
+  border: 1px solid #4facfe;
+}
+
+/* Submit button inside form */
+.change-location button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #90D9E0, #5460E6);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.change-location button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+
+@media(max-width: 768px) {
+  .weather-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .left-card, .right-card {
+    border-radius: 15px;
+  }
+} 
