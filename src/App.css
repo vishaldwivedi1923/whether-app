@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
  * {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@
   flex-wrap: wrap;
   background: #1e293b;
   border-radius: 15px;
-  /* overflow: hidden; */
+  
   max-width: 700px;
   width: 100%;
 }
@@ -34,13 +34,11 @@
   border-radius: 20px;
   
   background:
-    url('/images/Rectangle 2.png'); /* Use leading / to point to public folder */
+    url('/images/Rectangle 2.png'); 
     
   background-size: cover;
   background-position: center;
   min-height: 420px;
-  margin-top: -20px;
-  margin-bottom: -20px;
 }
 
 
@@ -130,7 +128,7 @@
   color: #000;
 }
 
-/* Change Location Button */
+
 .change-btn {
   width: 100%;
   padding: 12px;
@@ -149,7 +147,7 @@
   transform: translateY(-2px);
 }
 
-/* Form container */
+
 .change-location {
   display: flex;
   gap: 10px;
@@ -157,7 +155,7 @@
   width: 100%;
 }
 
-/* Input box */
+
 .change-location input {
   flex: 1;
   padding: 10px 12px;
@@ -174,7 +172,7 @@
   border: 1px solid #4facfe;
 }
 
-/* Submit button inside form */
+
 .change-location button {
   padding: 10px 16px;
   border: none;
@@ -191,6 +189,24 @@
   opacity: 0.9;
   transform: translateY(-2px);
 }
+  
+  @media(max-width: 992px) {
+  .temp-section {
+    margin-top: 80px;
+  }
+  .temp-section h1 {
+    font-size: 2.5rem;
+  }
+  .temp-section p {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 992px) {
+  .left-card {
+    margin-top: -20px;
+    margin-bottom: -20px;
+  }
+}
 
 
 @media(max-width: 768px) {
@@ -200,5 +216,64 @@
   }
   .left-card, .right-card {
     border-radius: 15px;
+    margin: 0 0 20px 0;
   }
-} 
+  .temp-section {
+    margin-top: 60px;
+  }
+  .left-card h2 {
+    font-size: 1.6rem;
+  }
+  .temp-section h1 {
+    font-size: 2rem;
+  }
+}
+
+
+@media(max-width: 576px) {
+  .left-card {
+    min-height: 300px;
+    padding: 15px;
+  }
+  .temp-section {
+    margin-top: 40px;
+  }
+  .temp-section h1 {
+    font-size: 1.8rem;
+  }
+  .temp-section p {
+    font-size: 1rem;
+  }
+  .details p {
+    font-size: 0.9rem;
+  }
+  .forecast .day {
+    min-width: 60px;
+    padding: 10px 6px;
+  }
+}
+
+
+@media(max-width: 400px) {
+ 
+  .left-card h2 {
+    font-size: 1.2rem;
+  }
+  .temp-section h1 {
+    font-size: 1.4rem;
+  }
+  .temp-section p {
+    font-size: 0.9rem;
+  }
+  .forecast {
+    gap: 6px;
+  }
+  .change-location {
+    flex-direction: column;
+  }
+  .change-location input,
+  .change-location button {
+    width: 100%;
+  }
+}  
+
